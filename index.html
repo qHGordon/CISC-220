@@ -8,14 +8,20 @@
   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    display: flex;
+    padding-left: 250px; /* Adjust based on sidebar width to prevent overlap */
+    background: #fff; /* Assuming white is the theme color */
   }
   
   .sidebar {
+    position: fixed;
     width: 250px; /* Adjust the width as needed */
-    background-color: #f1f1f1; /* Light grey background, change as needed */
+    background-color: #fff; /* Set to white as per the theme color */
+    border-right: 2px solid #000; /* Black border line */
     padding: 20px;
     height: 100vh; /* Full-height */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    overflow-y: auto; /* Enables scrolling within the sidebar if content overflows */
   }
 
   .sidebar-title {
@@ -26,7 +32,6 @@
   }
 
   .content {
-    flex-grow: 1;
     padding: 40px;
   }
 
@@ -84,16 +89,16 @@
 <div class="content">
   <div class="header">Outside the box</div>
 
-  <div class="photo-container">
-    <img src="https://queensu.ca/alumnireview/sites/alumnireview/files/styles/qar_article/public/2023-11/QAR-FA23-SmithEngineeringAnnouncement.png?h=f372ec15&itok=_i92ibgf" alt="Descriptive text about the image" class="main-image">
-    <div class="photo-credit">Photo credit: Chris Tanouye</div>
-  </div>
-
   <div class="title">How Queen's will change the world with a new approach to engineering education - thanks to Stephen Smith</div>
 
   <div class="byline">By Jordan Whitehouse</div>
 
   <div class="date">Nov 11, 2023</div>
+
+  <div class="photo-container">
+    <img src="path_to_your_image.jpg" alt="Descriptive text about the image" class="main-image">
+    <div class="photo-credit">Photo credit: Chris Tanouye</div>
+  </div>
 
   <!-- The article content goes here -->
 </div>
